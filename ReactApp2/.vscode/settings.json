@@ -1,0 +1,7 @@
+{
+    "debug.javascript.pickAndAttachOptions": {},
+    "js/ts.implicitProjectConfig.module": "ESNext",
+    "debug.javascript.defaultRuntimeExecutable": {
+        "pwa-node": "node"
+    }
+}
