@@ -24,8 +24,9 @@ function Car()
         It is a {data.color} {data.model} from {data.year}
     </p>
     {/* <button type="button" onClick={changeColor}>Change Color</button> */}
-    <button type="button" onClick={() => changeData('color','blue')}>Change Color</button>
-    <button type="button" onClick={() => changeData('year',2022)}>Change Year</button>
+    <button type="button" className="btn btn-primary" onClick={() => changeData('color','blue')}>Change Color</button>
+    &nbsp;
+    <button type="button" className="btn btn-secondary" onClick={() => changeData('year',2022)}>Change Year</button>
     </>
     );
 }

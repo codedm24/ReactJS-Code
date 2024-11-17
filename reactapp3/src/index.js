@@ -10,6 +10,7 @@ import Home from './pages/Home.js';
 import Layout from './pages/Layout.js';
 import NoPage from './pages/NoPage.js';
 import CarClass from './CarClass.js';
+import HtmlRender from './pages/HtmlRender.js';
 // // import './index.css';
 // // import App from './App';
 // // import reportWebVitals from './reportWebVitals';
@@ -31,17 +32,19 @@ const myFirstElement = (
                 <Route path='blogs' element={<Blogs/>}/>
                 <Route path='contact' element={<Contact/>}/>
                 <Route path='*' element={<NoPage/>} />
+                <Route path='HtmlRender' element={<HtmlRender/>}/> 
             </Route>
         </Routes>
     </BrowserRouter>
     </div>
     <div className="col-sm">
-    <h1>Hello World!!</h1>
-    <Car/>
-    <Garage />
-    <CarClass />
+        <h1>Hello World!!</h1>
+        <Car/>
+        <Garage />
+        <CarClass />
+        <HtmlRender/>
     </div>
-    </div>
+</div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
