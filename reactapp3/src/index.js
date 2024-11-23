@@ -11,6 +11,7 @@ import Layout from './pages/Layout.js';
 import NoPage from './pages/NoPage.js';
 import CarClass from './CarClass.js';
 import HtmlRender from './pages/HtmlRender.js';
+import BookChapterData from './BookChapterData.js';
 // // import './index.css';
 // // import App from './App';
 // // import reportWebVitals from './reportWebVitals';
@@ -38,11 +39,11 @@ const myFirstElement = (
     </BrowserRouter>
     </div>
     <div className="col-sm">
-        <h1>Hello World!!</h1>
         <Car/>
         <Garage />
         <CarClass />
         <HtmlRender/>
+        <BookChapterData/>
     </div>
 </div>
 );
