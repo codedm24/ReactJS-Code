@@ -12,6 +12,10 @@ import NoPage from './pages/NoPage.js';
 import CarClass from './CarClass.js';
 import HtmlRender from './pages/HtmlRender.js';
 import BookChapterData from './BookChapterData.js';
+import Camera from './Camera.js';
+import CameraFn from './CameraFn.js';
+import TravelAccessories from './TravelAccessories.js';
+
 // // import './index.css';
 // // import App from './App';
 // // import reportWebVitals from './reportWebVitals';
@@ -39,11 +43,23 @@ const myFirstElement = (
     </BrowserRouter>
     </div>
     <div className="col-sm">
+        <div className='bg bg-dark'>
         <Car/>
         <Garage />
         <CarClass />
+        </div>
+        <div className='bg bg-success'>
         <HtmlRender/>
+        </div>
+        <div className='bg bg-danger'>
         <BookChapterData/>
+        </div>
+        <div className="bg bg-primary">
+        <Camera cameratype="digital"/>
+        <CameraFn cameratype="movie"/>        
+        <TravelAccessories/>
+        </div>
+
     </div>
 </div>
 );

@@ -19,8 +19,8 @@ function Car()
     return(
     <>
     <h1 style={{color: "white", backgroundColor:data.color}}>Hi, I am a Car!</h1>
-    <h1>My brand:{data.brand}</h1>
-    <p style={{color: data.color}}>
+    <h1 className="text-info">My brand:{data.brand}</h1>
+    <p style={{color: data.color}} className="text-info">
         It is a {data.color} {data.model} from {data.year}
     </p>
     {/* <button type="button" onClick={changeColor}>Change Color</button> */}
