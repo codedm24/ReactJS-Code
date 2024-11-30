@@ -55,7 +55,7 @@ const myFirstElement = (
         <BookChapterData/>
         </div>
         <div className="bg bg-primary">
-        <Camera cameratype="digital"/>
+        <Camera cameratype="digital" favbrand = "GHI"/>
         <CameraFn cameratype="movie"/>        
         <TravelAccessories/>
         </div>
