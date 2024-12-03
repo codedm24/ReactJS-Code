@@ -31,7 +31,8 @@ class Camera extends React.Component
 
     getSnapshotBeforeUpdate(prevPros, prevState){
         document.getElementById("spanprevBrand").innerHTML = "Before the update favorite was " + prevState.favoriteBrand;
-
+        const snapshot = prevState.favoriteBrand;
+        return snapshot;
     }
 
     componentDidUpdate(){

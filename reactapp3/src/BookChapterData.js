@@ -52,10 +52,12 @@ function BookChapterData(){
             <h2>Items</h2>
             <table className="table table-bordered table-sm">
                     <thead className="thead-dark">
+                        <tr>
                         <th className="text-center">Name</th>
                         <th className="text-center">Title</th>
                         <th className="text-center">Pages</th>
                         <th className="text-center small-wdth"></th>
+                        </tr>
                     </thead>
                     <tbody>
                         {items.map((item) => {

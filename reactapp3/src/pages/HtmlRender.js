@@ -3,18 +3,22 @@ import React from "react";
 function HtmlRender()
 {
     const myElement1 =(
-      <table><tr><th>Name</th></tr><tr><th>John</th></tr><tr><th>Elsa</th></tr></table>
+      <table id="table1"><tbody>
+        <tr key="trName"><th>Name</th></tr>
+        <tr key="trJohn"><th>John</th></tr>
+        <tr key="trElsa"><th>Elsa</th></tr>
+        </tbody></table>
       //<h1>Hello</h1>
     );
 
-    const myElement2 = (5+5);
+    const myElement2 = (<p>5+5</p>);
 
     const myElement3 = (
-        <uL>
-            <li>Apples</li>
-            <li>Bananas</li>
-            <li>Cherries</li>
-        </uL>
+        <ul>
+            <li key="Apples">Apples</li>
+            <li key="Bananas">Bananas</li>
+            <li key="Cherries">Cherries</li>
+        </ul>
     );
 
     const myElement4 = (
@@ -41,13 +45,33 @@ function HtmlRender()
 
     const myElement7 = (<h1>{(x) < 10 ? "Hi" : "Hello"}</h1>);
 
-    const myElement = [myElement1, myElement2, myElement3, myElement4, myElement5, myElement6, myElement7];
+    //const myElement = [myElement1, myElement2, myElement3, myElement4, myElement5, myElement6, myElement7];
+
+    const myElement = [
+        {id: 1, element: myElement1},
+        {id: 2, element: myElement2},
+        {id: 3, element: myElement3},
+        {id: 4, element: myElement4},
+        {id: 5, element: myElement5},
+        {id: 6, element: myElement6},
+        {id: 7, element: myElement7},
+    ];
 
     return(
         //display method 1
-        <>
-            {myElement}
-        </>
+        //myElement
+        <div>
+
+            {
+                myElement.map(
+                    item =>(
+                        <div key={item.id}>
+                            {item.element}
+                        </div>    
+                    )                    
+                )
+            }
+        </div>
         //display method 2
         //myElement
             

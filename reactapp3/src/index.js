@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {configureStore} from '@reduxjs/toolkit';
+import rootReducer from './reducers';
 import './App.css';
 import Car from './Car.js';
 import Garage from './Garage.js';
@@ -15,7 +18,8 @@ import BookChapterData from './BookChapterData.js';
 import Camera from './Camera.js';
 import CameraFn from './CameraFn.js';
 import TravelAccessories from './TravelAccessories.js';
-
+import Counter from './Counter.js';
+import ErrorBoundary from './ErrorBoundary.js';
 // // import './index.css';
 // // import App from './App';
 // // import reportWebVitals from './reportWebVitals';
@@ -26,6 +30,10 @@ import TravelAccessories from './TravelAccessories.js';
 // //     <App />
 // //   </React.StrictMode>
 // // );
+
+const store = configureStore({
+    reducer: rootReducer
+});
 
 const myFirstElement = (
 <div>
@@ -57,15 +65,23 @@ const myFirstElement = (
         <div className="bg bg-primary">
         <Camera cameratype="digital" favbrand = "GHI"/>
         <CameraFn cameratype="movie"/>        
-        <TravelAccessories/>
+        <TravelAccessories/>        
         </div>
-
+        <div className="bg bg-primary">
+            <ErrorBoundary>
+                <Counter/>
+            </ErrorBoundary>
+        </div>
     </div>
 </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myFirstElement);
+root.render(
+    <Provider store={store}>
+        {myFirstElement}
+    </Provider>
+    );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
